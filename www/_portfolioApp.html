@@ -1,0 +1,55 @@
+<div class="portfolioWorks">
+<div id="shadow1"></div>
+    
+    <div class="gallery js-flickity"
+         data-flickity-options='{ "wrapAround": true, "autoPlay": true, "pageDots": false, "hash": true }'>
+        
+{{#section appPortfolio label="App Portfolio" priority=5 multiple=true}}
+    
+        <div class="gallery-cell" value="{{portfolioID label="Create Unique ID" placeholder="Title + Type + 3 Numbers" type=text required=true priority=4}}">
+            <div class="phoneModel" style="background-image: url({{portfolioIMG label="Portfolio Main IMG" type=image tag=false required=false priority=1}})"></div>
+        </div>
+    
+{{/section}}
+        
+        <div class="gallery-cell appTransparentCell">
+            <div class="phoneModel"></div>
+        </div>
+        
+        <div class="gallery-cell appTransparentCell">
+            <div class="phoneModel"></div>
+        </div>
+        
+    </div>
+    
+<div id="shadow2"></div>
+</div>
+
+<div id="selectedWork">
+{{#section appPortfolio}}
+    
+    <div class="portfolioContainer portfolioApp {{portfolioID}}">
+
+        <div class="portfolioContent">
+
+            <div>
+                <h2 class="projectTitle">
+                    {{portfolioTitle type=text label="Portfolio Title" placeholder="Title" required=false priority=2}}
+                </h2>
+
+                <a class="projectLink" href="{{projectLink type=link label="Project Link" placeholder="Link URL" required=false}}">
+                    {{projectLinkName type=text label="Project Link Name" placeholder="Get the app here" required=false}}
+                </a>
+            </div>
+
+            <div class="projectDescription">
+                {{portfolioDescription type=html images=true label="Portfolio Description" required=false priority=5}}
+            </div>
+
+        </div>
+
+
+    </div>
+    
+{{/section}}
+</div>

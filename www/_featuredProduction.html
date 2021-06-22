@@ -1,0 +1,185 @@
+{{#section productionFeatured label="Production Featured" priority=12 multiple=true}}
+
+<div class="featuredContainer featuredSort" value="{{featuredSort type=number label="Featured Work Priority" min=1 step=1 range=false required=true priority=2}}">
+    
+    <a class="featuredLink" value="{{projectSongID}}" href="{{featuredLink type=text label="Featured Link" required=false}}">
+        <div class="vinylRecord">
+            <div class="vinylOverlay"></div>
+            <img src="{{productionProjects label="Project Cover Art" type=image tag=false required=false}}" class="vinylIMG" />
+        </div>
+    </a>
+    
+    <div class="featuredContent">
+        
+        <!-- Music Player -->
+        <div id="{{projectSongID label="Create Unique ID" placeholder="Title + Artist Name + 3 Numbers" type=text required=true}}" class="projectPlaylist">
+            
+            <script defer>
+                /* Audio files in the player */
+                let {{projectSongID}} = new cplayer({
+                    element: document.getElementById('{{projectSongID}}'),
+                    playlist: [
+                        {{projectSong label="Project Song (duration: 'm.ss')" type=html editor=false required=false}}
+                    ]
+                });
+                
+                /* Set volume */
+                {{projectSongID}}.setVolume(8 / 10);
+                
+                /* Get the audio file names in the list */
+                var list{{projectSongID}} = {{projectSongID}}.playlist.map(({ name }) => name);
+                
+/* Custom Audio Player Animation - START */
+jQuery(document).ready(function() {
+    
+    /* Create current time slider - START */
+    var timeInterval;
+    
+    function songDuration(){
+        var durationCheck = {{projectSongID}}.duration;
+        if(durationCheck == Infinity || durationCheck == undefined || durationCheck == NaN || durationCheck == ''){
+            var timeSteps = {{projectSongID}}.nowplay.duration;
+
+            var currentTimeVal = timeSteps * {{projectSongID}}.currentTime;
+
+           jQuery('#durationSlider{{projectSongID}}').val(currentTimeVal).change();
+       }else{
+            var timeSteps = 1000 / {{projectSongID}}.duration;
+
+            var currentTimeVal = timeSteps * {{projectSongID}}.currentTime;
+
+           jQuery('#durationSlider{{projectSongID}}').val(currentTimeVal).change();
+       }
+    }
+    /* Create current time slider - END */
+
+    /* Get song title - START */
+    function showSongTitle(){
+        jQuery('#songTitle{{projectSongID}}').text({{projectSongID}}.nowplay.name);
+    }
+    showSongTitle();
+    /* Get song title - END */
+                
+    /* Show playlist - START */
+    function showPlaylist(){
+        var arrayLength = list{{projectSongID}}.length;
+
+        for (i = 0; i < arrayLength; i++) {
+          jQuery('<div value="'+i+'" class="song" onclick="{{projectSongID}}.to(id = '+i+')">').text(list{{projectSongID}}[i]).appendTo('#playlist{{projectSongID}}');
+        }
+        
+        jQuery("#playlist{{projectSongID}} .song").first().addClass("activeSong");
+    }
+    showPlaylist();
+    
+    /* Play music - START */
+    jQuery('.playAudio').on('click', function(){
+        timeInterval = setInterval(songDuration, 1000);
+        
+        jQuery(this).addClass('hideAudioBtn');
+        jQuery(this).siblings('.pauseAudio').removeClass('hideAudioBtn');
+
+        jQuery(this).closest('.featuredContainer').find('.vinylIMG').addClass('vinylRoteate');
+    });
+    /* Play music - END */
+    
+    /* Pause music - START */
+    jQuery('.pauseAudio').on('click', function(){
+        clearInterval(timeInterval);
+        
+        jQuery(this).addClass('hideAudioBtn');
+        jQuery(this).siblings('.playAudio').removeClass('hideAudioBtn');
+        
+        jQuery(this).closest('.featuredContainer').find('.vinylIMG').removeClass('vinylRoteate');
+    });
+    /* Pause music - END */
+                
+    /* Select Song - START */
+    jQuery('.song').on('click', function(){
+            clearInterval(timeInterval);
+            timeInterval = setInterval(songDuration, 1000);
+
+            showSongTitle();
+        
+            jQuery(this).siblings('.song').removeClass('activeSong');
+            jQuery(this).addClass('activeSong');
+    });
+    /* Select Song - END */
+    
+    /* PREV Song - START */
+    jQuery('.prev{{projectSongID}}').on('click', function(){
+        clearInterval(timeInterval);
+        timeInterval = setInterval(songDuration, 1000);
+        
+        jQuery(this).closest('.projectPlaylist').find('.song').removeClass('activeSong');
+        
+        showSongTitle();
+        
+        jQuery(this).closest('.projectPlaylist').find('.song[value='+ {{projectSongID}}.nowplaypoint +']').addClass('activeSong');
+    });
+    /* PREV Song - END */
+    
+    /* NEXT Song - START */
+    jQuery('.next{{projectSongID}}').on('click', function(){
+        clearInterval(timeInterval);
+        timeInterval = setInterval(songDuration, 1000);
+        
+        jQuery(this).closest('.projectPlaylist').find('.song').removeClass('activeSong');
+        
+        showSongTitle();
+        
+        jQuery(this).closest('.projectPlaylist').find('.song[value='+ {{projectSongID}}.nowplaypoint +']').addClass('activeSong');
+    });
+    /* NEXT Song - END */
+     
+    /* Change current Song Time - START */
+    /*
+    jQuery("#durationSlider{{projectSongID}}").on("change input", function () {
+        clearInterval(timeInterval);
+        var song  =  jQuery("#{{projectSongID}}");
+		  
+        var newTime = jQuery(this).val();
+        var timeSteps = (1000 / song.duration);
+        var setNewTime = newTime / timeSteps;
+
+        song.currentTime = setNewTime;
+    });
+    */
+    /* Change current Song Time - END */
+
+});
+/* Custom Audio Player Animation - END */
+            </script>
+            
+            <input id="durationSlider{{projectSongID}}" class="durationSlider" type="range" value="0" min="0" max="1000" step="1" disabled />
+            
+            <div class="controls">
+                <i class="fas fa-play-circle playAudio" onclick="{{projectSongID}}.play();"></i>
+                <i class="fas fa-pause-circle pauseAudio hideAudioBtn" onclick="{{projectSongID}}.pause();"></i>
+
+                <i class="fas fa-backward prevAudio prev{{projectSongID}}" onclick="{{projectSongID}}.prev();"></i>
+                <i class="fas fa-forward nextAudio next{{projectSongID}}" onclick="{{projectSongID}}.next();"></i>
+                
+                <input class="volumeSlider" type="range" value="8" min="0" max="10" step="1" oninput="{{projectSongID}}.setVolume(value / 10)" />
+                
+                <i class="fas fa-caret-down showPlaylist"></i>
+                
+                <span id="songTitle{{projectSongID}}" class="songTitle"></span>
+            </div>
+            <div id="playlist{{projectSongID}}" class="playlistSongs"></div>
+        </div>
+        
+        <div>
+            <h2 class="projectTitle"><a class="featuredLink" value="{{projectSongID}}" href="{{featuredLink type=text label="Featured Link" required=false}}">{{projectTitle type=text label="Project Title" placeholder="Title" required=false}}</a></h2>
+            
+            <span class="projectArtist">{{projectArtist type=text label="Project Artist" placeholder="Artist" required=false}}</span>
+        </div>
+        
+        <div class="projectDescription">{{projectDescription type=html label="Project Description" placeholder="Short Project Description" required=false}}</div>
+            
+    </div>
+        
+        
+</div>
+
+{{/section}}

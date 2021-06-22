@@ -1,12 +1,14 @@
 {
-  "name": "vapid_ddario",
-  "vapid": {
-  },
+  "name": "Dario Dumlijan",
+  "vapid": {},
   "scripts": {
     "start": "vapid start .",
     "build": "vapid build ."
   },
   "dependencies": {
     "@vapid/cli": "^0.11.4"
+  },
+  "devDependencies": {
+    "sqlite3": "^5.0.2"
   }
 }

@@ -1,0 +1,120 @@
+{{#section form label="Main Form" priority=9 multiple=false}}
+
+<div id="hireMeForm">
+    <div id="form">
+        <div id="formBG">
+            <i id="hireMeFormClose" class="fas fa-times"></i>
+            <h2>
+                {{formTitle type=text label="Form Title" placeholder="Title" required=false}}
+            </h2>
+            <div class="wave">                
+                <svg version="1.1" class="wave1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1152 138" style="enable-background:new 0 0 1152 138;" xml:space="preserve">
+                <path d="M576,0H0l0,106.1c0,0,76.1-11.3,167.4-11.3s174.6,26.3,248.3,26.3s160.3-15,160.3-15s76.1-11.3,167.4-11.3
+                    s174.6,26.3,248.3,26.3s160.3-15,160.3-15L1152,0H576z"/>
+                </svg>
+                
+                <svg version="1.1" class="wave2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1152 138" style="enable-background:new 0 0 1152 138;" xml:space="preserve">
+                <path d="M576,0H0l0,106.1c0,0,76.1-11.3,167.4-11.3s174.6,26.3,248.3,26.3s160.3-15,160.3-15s76.1-11.3,167.4-11.3
+                    s174.6,26.3,248.3,26.3s160.3-15,160.3-15L1152,0H576z"/>
+                </svg>
+                
+                <svg version="1.1" class="wave3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1152 138" style="enable-background:new 0 0 1152 138;" xml:space="preserve">
+                <path d="M576,0H0l0,106.1c0,0,76.1-11.3,167.4-11.3s174.6,26.3,248.3,26.3s160.3-15,160.3-15s76.1-11.3,167.4-11.3
+                    s174.6,26.3,248.3,26.3s160.3-15,160.3-15L1152,0H576z"/>
+                </svg>
+            </div>
+        </div>
+        
+        <form id="formMain" action="form-submit.php" method="post">
+            <div class="formContain">
+            <label for="fname">
+                {{formInputName type=text label="Name" placeholder="Name *" required=true}}
+                </label>
+                <div class="formNames">
+                    <input type="text" id="fname" name="fname" placeholder="First Name" required />
+                    <input type="text" id="lname" name="lname" placeholder="Last Name" required />
+                </div>
+            </div>
+            
+            <div class="formContain">
+                <label for="femail">
+                    {{formInputMail type=text label="Email" placeholder="Email *" required=true}}
+                </label>
+                <input type="text" id="femail" name="femail" placeholder="name@email.com" required />
+            </div>
+            
+            <div class="formContain">
+                <label for="jobType">
+                    {{formInputJob type=text label="Job type" placeholder="Job type *" required=true}}
+                </label>
+                <select class="jobType" name="jobType" required>
+                  <option value="App">
+                      {{formInputJobApp type=text label="App Job" placeholder="App Job" required=true}}
+                    </option>
+                  <option value="Web">
+                      {{formInputJobWeb type=text label="Web Job" placeholder="Web Job" required=true}}
+                    </option>
+                  <option value="Production">
+                      {{formInputJobProduction type=text label="Production Job" placeholder="Production Job" required=true}}
+                    </option>
+                </select>
+            </div>
+            
+            <div class="formContain">
+                <label for="fdetails">
+                    {{formInputDetail type=text label="Project Details" placeholder="Project Details *" required=true}}
+                </label>
+                <span>
+                    {{formInputDetailExp type=text label="Project Explain" placeholder="Project Explain" required=false}}
+                </span>
+                <textarea name="fdetails" required></textarea>
+            </div>
+            
+            <div class="formContain">
+                <label for="frefs">
+                    {{formInputRefs type=text label="Reference Files" placeholder="Reference Files" required=true}}
+                </label>
+                <span class="refDesc refApp">
+                    {{formRefExpApp type=text long=true label="Ref Files App Description" placeholder="Description" required=false}}
+                </span>
+                
+                <span class="refDesc refWeb">
+                    {{formRefExpWeb type=text long=true label="Ref Files Web Description" placeholder="Description" required=false}}
+                </span>
+                
+                <span class="refDesc refProduction">
+                    {{formRefExpProduction type=text long=true label="Ref Files Production Description" placeholder="Description" required=false}}
+                </span>
+                
+                <input type="text" id="frefs" name="frefs" placeholder="https://" />
+            </div>
+            
+            <div class="formContain">
+                <label for="fbudget">
+                    {{formInputBudget type=text label="Budget" placeholder="Estimated Budget" required=true}}
+                </label>
+                <input type="text" id="fbudget" name="fbudget" placeholder="£" />
+            </div>
+            
+            <div class="formContain">
+                <label for="fdeadline">
+                    {{formInputDeadline type=text label="Deadline" placeholder="Deadline" required=true}}
+                </label>
+                <div class="formDates">
+                    <input type="text" pattern="[0-9]*" inputmode="numeric" maxlength="2" onkeypress="return numeric(event)" id="fdeadlineDAY" name="fdeadlineDAY" placeholder="dd" />
+                    <input type="text" pattern="[0-9]*" inputmode="numeric" maxlength="2" onkeypress="return numeric(event)" id="fdeadlineMONTH" name="fdeadlineMONTH" placeholder="mm" />
+                    <input type="text" pattern="[0-9]*" inputmode="numeric" maxlength="4" onkeypress="return numeric(event)" id="fdeadlineYEAR" name="fdeadlineYEAR" placeholder="yyyy" />
+                </div>
+            </div>
+            
+            <div class="formContainBtns">
+                <input id="formReset" type="reset" value="{{formInputReset type=text label="Reset Name" placeholder="Reset" required=true}}">
+                <input id="formSubmit" name="submit" type="submit" value="{{formInputSubmit type=text label="Submit Name" placeholder="Submit" required=true}}">
+            </div>
+        </form>
+        
+    </div>
+    <div class="blurWindow"></div>
+</div>
+
+{{/section}}

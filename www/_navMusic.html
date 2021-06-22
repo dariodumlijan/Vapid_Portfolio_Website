@@ -1,0 +1,21 @@
+<nav id="mainNavigation">
+    <a id="logo" href="/">
+        <img src="{{musicLogo label="Music Logo" type=image tag=false required=true  priority=2}}" />
+    </a>
+    
+    <div id="call2ActionIconSort" class="socialsNavigation">
+    {{#section call2actionMusic label="My Music Socials" sortable=false multiple=true priority=17}}
+
+        <a class="call2ActionIcons" href="{{actionLink type=text label="Call2Action Link" required=false priority=3}}" value="{{call2ActionIconSort type=number label="Call2Action Icon Priority" min=1 max=10 step=1 range=false required=true priority=1}}">
+            <i class="{{actionIcon type=text label="Call2Action Icon" placeholder="fab fa-instagram" required=false  priority=2}}"></i>
+        </a>
+
+    {{/section}}
+    </div>
+    
+    <div id="navIcons">
+        <i id="toggleMenu" class="fas fa-ellipsis-v" onclick="showMenu();"></i>
+    </div>
+    {{> menu}}
+    
+</nav>

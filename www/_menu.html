@@ -1,0 +1,32 @@
+{{#section menu label="Toggle Menu"}}
+
+<div id="langNav">
+    <i id="closeMenu" class="fas fa-angle-right" onclick="closeMenu();"></i>
+    
+    <!--
+    <div class="menuManage">
+        <h3 id="menuTitle">Language</h3>
+        <hr id="animatedLine" />
+        <span id="hrv" class="menuItem">HRV</span>
+        <span id="eng" class="menuItem">ENG</span>
+    </div>
+    -->
+    
+    <div class="menuManage">
+        <h3 id="menuTitle">Sections</h3>
+        <hr id="animatedLine" />
+        
+        <div id="menuSortIcon">
+            {{#section sections}}
+            <a class="sectionLinks" href="{{sectionLink}}" value="{{sectionIconSort}}">
+                <div class="sectionMenuIcons">
+                    <img src="{{siteSectionIcon type=image tag=false}}" />
+                    <span>{{siteSectionTitle}}</span>
+                </div>
+            </a>
+            {{/section}}
+        </div>
+    </div>
+</div>
+
+{{/section}}

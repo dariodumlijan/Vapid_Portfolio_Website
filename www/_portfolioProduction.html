@@ -1,0 +1,222 @@
+<div id="selectedWork">
+    
+    {{#section productionPortfolio label="Production Portfolio" priority=13 multiple=true sortable=true}}
+    
+    {{#if portfolioSong}}
+    <div class="portfolioContainer portfolioSong {{portfolioSongID label="Create Unique ID" placeholder="Title + Artist Name + 3 Numbers" type=text required=true priority=4}}">
+
+        <div class="vinylRecord">
+            <div class="vinylOverlay"></div>
+            <img src="{{productionPortfolioIMG label="Portfolio Cover Art" type=image tag=false required=false priority=1}}" class="vinylIMG" />
+        </div>
+
+        <div class="portfolioContent">
+
+            <!-- Music Player -->
+            <div id="{{portfolioSongID}}" class="projectPlaylist">
+                
+<script defer>
+    /* Audio files in the player */
+let {{portfolioSongID}} = new cplayer({
+    element: document.getElementById('{{portfolioSongID}}'),
+    playlist: [
+        {{portfolioSong label="Portfolio Song (duration: 'm.ss')" type=html editor=false required=false priority=7}}
+    ]
+});
+
+    /* Set volume */
+{{portfolioSongID}}.setVolume(8 / 10);
+
+    /* Get the audio file names in the list */
+var list{{portfolioSongID}} = {{portfolioSongID}}.playlist.map(({ name }) => name);
+                
+/* Custom Audio Player Animation - START */
+jQuery(document).ready(function() {
+    
+    /* Create current time slider - START */
+    var timeInterval;
+    
+    function songDuration(){
+        var durationCheck = {{portfolioSongID}}.duration;
+        if(durationCheck == Infinity || durationCheck == undefined || durationCheck == NaN || durationCheck == ''){
+            var timeSteps = {{portfolioSongID}}.nowplay.duration;
+
+            var currentTimeVal = timeSteps * {{portfolioSongID}}.currentTime;
+
+           jQuery('#durationSlider{{portfolioSongID}}').val(currentTimeVal).change();
+       }else{
+            var timeSteps = 1000 / {{portfolioSongID}}.duration;
+
+            var currentTimeVal = timeSteps * {{portfolioSongID}}.currentTime;
+
+           jQuery('#durationSlider{{portfolioSongID}}').val(currentTimeVal).change();
+       }
+    }
+    /* Create current time slider - END */
+
+    /* Get song title - START */
+    function showSongTitle(){
+        jQuery('#songTitle{{portfolioSongID}}').text({{portfolioSongID}}.nowplay.name);
+    }
+    showSongTitle();
+    /* Get song title - END */
+                
+    /* Show playlist - START */
+    function showPlaylist(){
+        var arrayLength = list{{portfolioSongID}}.length;
+
+        for (i = 0; i < arrayLength; i++) {
+          jQuery('<div value="'+i+'" class="song" onclick="{{portfolioSongID}}.to(id = '+i+')" />').text(list{{portfolioSongID}}[i]).appendTo('#playlist{{portfolioSongID}}');
+        }
+        
+        jQuery("#playlist{{portfolioSongID}} .song").first().addClass("activeSong");
+    }
+    showPlaylist();
+    /* Show playlist - END */
+    
+    /* Play music - START */
+    jQuery('.playAudio').on('click', function(){
+        timeInterval = setInterval(songDuration, 1000);
+        
+        jQuery(this).addClass('hideAudioBtn');
+        jQuery(this).siblings('.pauseAudio').removeClass('hideAudioBtn');
+
+        jQuery(this).closest('.portfolioContainer').find('.vinylIMG').addClass('vinylRoteate');
+    });
+    /* Play music - END */
+    
+    /* Pause music - START */
+    jQuery('.pauseAudio').on('click', function(){
+        clearInterval(timeInterval);
+        
+        jQuery(this).addClass('hideAudioBtn');
+        jQuery(this).siblings('.playAudio').removeClass('hideAudioBtn');
+        
+        jQuery(this).closest('.portfolioContainer').find('.vinylIMG').removeClass('vinylRoteate');
+    });
+    /* Pause music - END */
+    
+    /* Select Song - START */
+    jQuery('.song').on('click', function(){
+            clearInterval(timeInterval);
+            timeInterval = setInterval(songDuration, 1000);
+
+            showSongTitle();
+        
+            jQuery(this).siblings('.song').removeClass('activeSong');
+            jQuery(this).addClass('activeSong');
+    });
+    /* Select Song - END */
+    
+    /* PREV Song - START */
+    jQuery('.prev{{portfolioSongID}}').on('click', function(){
+        clearInterval(timeInterval);
+        timeInterval = setInterval(songDuration, 1000);
+        
+        jQuery(this).closest('.projectPlaylist').find('.song').removeClass('activeSong');
+        
+        showSongTitle();
+        
+        jQuery(this).closest('.projectPlaylist').find('.song[value='+ {{portfolioSongID}}.nowplaypoint +']').addClass('activeSong');
+    });
+    /* PREV Song - END */
+    
+    /* NEXT Song - START */
+    jQuery('.next{{portfolioSongID}}').on('click', function(){
+        clearInterval(timeInterval);
+        timeInterval = setInterval(songDuration, 1000);
+        
+        jQuery(this).closest('.projectPlaylist').find('.song').removeClass('activeSong');
+        
+        showSongTitle();
+        
+        jQuery(this).closest('.projectPlaylist').find('.song[value='+ {{portfolioSongID}}.nowplaypoint +']').addClass('activeSong');
+    });
+    /* NEXT Song - END */
+
+});
+/* Custom Audio Player Animation - END */
+</script>
+                
+                    <input id="durationSlider{{portfolioSongID}}" class="durationSlider" type="range" value="0" min="0" max="1000" step="1" disabled />
+
+                <div class="controls">
+                    <i class="fas fa-play-circle playAudio" onclick="{{portfolioSongID}}.play();"></i>
+                    <i class="fas fa-pause-circle pauseAudio hideAudioBtn" onclick="{{portfolioSongID}}.pause();"></i>
+
+                    <i class="fas fa-backward prevAudio prev{{portfolioSongID}}" onclick="{{portfolioSongID}}.prev();"></i>
+                    <i class="fas fa-forward nextAudio next{{portfolioSongID}}" onclick="{{portfolioSongID}}.next();"></i>
+
+                    <input class="volumeSlider" type="range" value="8" min="0" max="10" step="1" oninput="{{portfolioSongID}}.setVolume(value / 10)" />
+                    
+                    <i class="fas fa-caret-down showPlaylist"></i>
+
+                    <span id="songTitle{{portfolioSongID}}" class="songTitle"></span>
+                </div>
+                <div id="playlist{{portfolioSongID}}" class="playlistSongs"></div>
+            </div>
+
+            <div>
+                <h2 class="projectTitle">{{portfolioTitle type=text label="Portfolio Title" placeholder="Title" required=false priority=2}}</h2>
+
+                <span class="projectArtist">{{portfolioArtist type=text label="Portfolio Artist" placeholder="Artist" required=false priority=3}}</span>
+            </div>
+
+            <div class="projectDescription">{{portfolioDescription type=html label="Portfolio Description" required=false priority=5}}</div>
+
+        </div>
+
+
+    </div>
+    {{/if}}
+
+    {{#if portfolioVideo}}
+    <div class="portfolioContainer portfolioVideo {{portfolioSongID}}">
+
+        {{portfolioVideo label="Portfolio Video" type=html editor=false required=false priority=8}}
+
+        <div class="portfolioContent">
+
+            <div>
+                <h2 class="projectTitle">{{portfolioTitle}}</h2>
+
+                <span class="projectArtist">{{portfolioArtist}}</span>
+            </div>
+
+            <div class="projectDescription">{{portfolioDescription type=html label="Portfolio Description" required=false priority=5}}</div>
+
+        </div>
+
+
+    </div>
+    {{/if}}
+    {{/section}}
+
+    <div id="togglePortfolioScale">
+        <i class="fas fa-angle-double-down"></i>
+    </div>
+    <div id="togglePortfolioFocus">
+        <i class="fas fa-minus"></i>
+        <i class="fas fa-plus hiddenFocus"></i>
+    </div>
+</div>
+
+<div id="portfolioFilters">
+    
+    <button class="filterBtn activeFilter" value="1" onclick="filterSelection('all')">All</button>
+    
+    {{#section productionPortfolioFilters label="Production Portfolio Filters" priority=14 multiple=true}}
+        <button class="filterBtn" value="{{filterSort type=number label="Filter Priority" min=2 step=1 range=false required=true}}" onclick="filterSelection('{{portfolioFilter label="Portfolio Filter" placeholder="Filter" type=text required=true priority=2}}')">{{portfolioFilterName label="Portfolio Filter Name" placeholder="Filter Name" type=text required=true priority=1}}</button>
+    {{/section}}
+    
+</div>
+                
+<div class="portfolioWorks">
+{{#section productionPortfolio}}
+    
+    <div class="filterPortfolioWork {{portfolioFilter label="Portfolio Filter" placeholder="Filter" type=text required=true priority=6}}" value="{{portfolioSongID}}" style="background-image: url({{productionPortfolioIMG type=image tag=false}})">
+        <div class="workTitle">{{portfolioTitle}}</div>
+    </div>
+    
+{{/section}}
+</div>

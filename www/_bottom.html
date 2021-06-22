@@ -1,0 +1,15 @@
+<p id="hireMeBottom" class="hireMe">{{hire type=text label="Hire" placeholder="Hire Me" required=false  priority=5}}</p>
+
+<div class="endContact">
+    <p id="email">{{email type=text label="E-mail" placeholder="name@email.com" required=false  priority=4}}</p>
+
+    <div id="call2ActionIconSort" class="socials">
+    {{#section call2action label="Call To Action" sortable=false multiple=true}}
+
+        <a class="call2ActionIcons" href="{{actionLink type=text label="Call2Action Link" required=false priority=3}}" value="{{call2ActionIconSort type=number label="Call2Action Icon Priority" min=1 max=10 step=1 range=false required=true priority=1}}">
+            <i class="{{actionIcon type=text label="Call2Action Icon" placeholder="fab fa-instagram" required=false  priority=2}}"></i>
+        </a>
+
+    {{/section}}
+    </div>
+</div>

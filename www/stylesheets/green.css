@@ -1,0 +1,392 @@
+/* Scrollbar */
+::-webkit-scrollbar-thumb{
+	background-color: #00a550; /* Change on icon hover to reflect color palate*/
+}
+/* Scrollbar END */
+
+/* Main Style - START */
+/* Menu - START */
+#toggleMenu:hover{
+    color: #00a550;
+}
+
+#closeMenu:hover{
+    color: #00a550;
+}
+
+.sectionMenuIcons:hover{
+    color: #00a550;
+}
+/* Menu - END */
+
+/* Home Page - START */
+.typewrite{
+    color: #00a550;
+    border-right: 5pt solid #00a550;
+}
+/* Home Page - END */
+
+/* Music Page - START */
+#musicMain #splitMusicLine {
+    background-color: #00a550;
+}
+
+#musicMain .myMusicGrid {
+    border: 1pt solid #00a550;
+}
+/* Music Page - END */
+
+/* Navigation - START */
+.navLink::after{
+    background-color: #00a550;
+}
+
+#hireMeNav{
+    color: #00a550;
+    border: 2pt solid #00a550;
+}
+
+#hireMeNav:hover{
+    background-color: #00a550;
+}
+/* Navigation - END */
+
+/* Featured Work App - START */
+.featuredContainerApp{
+    border-left: 2pt solid #00a550;
+    border-bottom: 2pt solid #00a550;
+}
+
+.featuredContainerApp:nth-of-type(even) {
+    border-right: 2pt solid #00a550;
+}
+
+.phoneModel{
+    border: 1pt solid #00a550;
+}
+
+.projectTitle a:hover{
+    color: #00a550;
+}
+
+.projectLink{
+    color: #00a550;
+}
+/* Featured Work App - END */
+
+/* Featured Work Design - START */
+.featuredContainerDesign{
+    border-left: 2pt solid #00a550;
+    border-bottom: 2pt solid #00a550;
+}
+
+.featuredContainerDesign:nth-of-type(even) {
+    border-right: 2pt solid #00a550;
+}
+
+.projectTitle a:hover{
+    color: #00a550;
+}
+
+.projectLink{
+    color: #00a550;
+}
+/* Featured Work Design - END */
+
+/* Featured Work Production - START */
+.featuredContainer{
+    border-left: 2pt solid #00a550;
+    border-bottom: 2pt solid #00a550;
+}
+
+.featuredContainer:nth-of-type(even) {
+    border-right: 2pt solid #00a550;
+}
+
+.projectTitle a:hover{
+    color: #00a550;
+}
+
+.projectArtist{
+    color: #00a550;
+}
+/* Featured Work Production - END */
+
+/* Production About me - START */
+#tabs .tablinks{
+    color: #00a550;
+    border: 2pt solid #00a550;
+}
+
+#tabs .tablinks:hover{
+    background-color: #00a550;
+}
+
+#tabs .active {
+    background-color: #00a550;
+}
+
+.tabcontent {
+    border: 2pt solid #00a550;
+}
+/* Production About me - END */
+
+/* Production Portfolio - START */
+#selectedWork::after{
+    background-color: #00a550;
+}
+
+#selectedWork .portfolioSong{
+    border-bottom: 2pt solid #00a550;
+}
+
+#togglePortfolioScale{
+    background-color: #00a550;
+}
+
+#togglePortfolioFocus{
+    background-color: #00a550;
+}
+
+.filterBtn {
+    color: #00a550;
+    border: 2pt solid #00a550;
+}
+
+.filterBtn:hover {
+    background-color: #00a550;
+}
+
+.filterBtn.activeFilter {
+    background-color: #00a550;
+}
+
+.filterPortfolioWork {
+    border: 1pt solid #00a550;
+}
+
+.filterPortfolioWork:hover {
+    -webkit-box-shadow: inset 0 0 0 40vw rgb(0 165 80 / 60%);
+            box-shadow: inset 0 0 0 40vw rgb(0 165 80 / 60%);
+}
+
+.myMusicGrid:hover{
+    -webkit-box-shadow: inset 0 0 0 40vw rgb(0 165 80 / 60%);
+            box-shadow: inset 0 0 0 40vw rgb(0 165 80 / 60%);
+}
+/* Production Portfolio - END */
+
+/* Production Contact - START */
+#contactFormContact:after {
+    background-color: #00a550;
+}
+
+.formSplit .nextFormTab, .formSplit .formResetNext{
+    color: #00a550;
+    border: 2pt solid #00a550;
+}
+
+.formSplit .nextFormTab:hover, .formSplit .formResetNext:hover{
+    background-color: #00a550;
+}
+
+.formSplit .formContainBtns #formReset, .formSplit .formContainBtns #formSubmit {
+    color: #00a550;
+    border: 2pt solid #00a550;
+}
+
+.formSplit .formContainBtns #formSubmit {
+    background-color: #00a550;
+}
+
+.formSplit .formContainBtns #formReset:hover{
+    background-color: #00a550;
+}
+
+.call2ActionContact:hover{
+    color: #00a550;
+}
+
+.call2ActionContact > i{
+    color: #00a550;
+}
+/* Production Contact - END */
+
+/* HireMe Form - START */
+.formContain input{
+    border: 1pt solid #00a550;
+}
+
+.jobType{
+    border: 1pt solid #00a550;
+    /* background-image: url(../images/arrow.svg); */
+}
+
+.formContain textarea{
+    border: 1pt solid #00a550;
+}
+
+#formReset{
+    color: #00a550;
+    border: 2pt solid #00a550;
+}
+
+#formReset:hover{
+    background-color: #00a550;
+}
+
+#formSubmit{
+    border: 2pt solid #00a550;
+    background-color: #00a550;
+}
+/* HireMe Form - END */
+
+/* Bottom - START */
+.call2ActionIcons:hover{
+    color: #00a550;
+}
+
+#hireMeBottom{
+    color: #00a550;
+    border: 2pt solid #00a550;
+}
+
+#hireMeBottom:hover{
+    background-color: #00a550;
+}
+/* Bottom - END */
+
+/* Footer - START */
+#back2top{
+    color: #00a550;
+}
+/* Footer - END */
+
+/* Custom audio player - START */
+.projectPlaylist {
+    border: 2pt solid #00a550;
+}
+
+.durationSlider{
+    background-color: #002110;
+}
+
+.durationSlider::-webkit-slider-runnable-track {
+    background-color: #002110;
+}
+
+.durationSlider::-webkit-slider-thumb {
+    background-color: #00a550;
+    -webkit-box-shadow: -100vw 0 0 100vw #00a550;
+            box-shadow: -100vw 0 0 100vw #00a550;
+}
+
+/** FF*/
+.durationSlider::-moz-range-progress {
+  background-color: #00a550; 
+}
+.durationSlider::-moz-range-track {  
+  background-color: #002110;
+}
+/* IE*/
+.durationSlider::-ms-fill-lower {
+  background-color: #00a550; 
+}
+.durationSlider::-ms-fill-upper {  
+  background-color: #002110;
+}
+
+.controls > *:hover{
+    color: #00a550;
+}
+
+.volumeSlider::-webkit-slider-runnable-track {
+    color: #00a550;
+}
+
+.volumeSlider::-webkit-slider-thumb {
+    background-color: #00a550;
+    -webkit-box-shadow: -100pt 0 0 100pt #00a550;
+            box-shadow: -100pt 0 0 100pt #00a550;
+}
+/** FF*/
+.volumeSlider::-moz-range-progress {
+  background-color: #00a550; 
+}
+/* IE*/
+.volumeSlider::-ms-fill-lower {
+  background-color: #00a550; 
+}
+
+.playlistSongs{
+    border: 2pt solid #00a550;
+}
+
+.song:hover{
+    color: #00a550;
+}
+
+.activeSong{
+    color: #00a550;
+}
+/* Custom audio player - END */
+
+/* Custom Animated Elements - START */
+.wave1 {
+    fill:#00a550;
+}
+
+.wave2 {
+    fill:#00a550;
+}
+
+.wave3 {
+    fill:#00a550;
+}
+
+@-webkit-keyframes pulseTab {
+  0% {
+    background-color: rgba(0, 165, 80, 0.7);
+    border: 2pt rgba(0, 165, 80, 0.7);
+  }
+
+  50% {
+      background-color: rgba(0, 165, 80, 1);
+      border: 2pt rgba(0, 165, 80, 1);
+  }
+
+  100% {
+      background-color: rgba(0, 165, 80, 0.7);
+      border: 2pt rgba(0, 165, 80, 0.7);
+  }
+}
+
+@keyframes pulseTab {
+  0% {
+      background-color: rgba(0, 165, 80, 0.7);
+      border: 2pt rgba(0, 165, 80, 0.7);
+  }
+
+  50% {
+      background-color: rgba(0, 165, 80, 1);
+      border: 2pt rgba(0, 165, 80, 1);
+  }
+
+  100% {
+      background-color: rgba(0, 165, 80, 0.7);
+      border: 2pt rgba(0, 165, 80, 0.7);
+  }
+}
+/* Custom Animated Elements - END */
+
+@media only screen and (max-width: 1000px) {
+    #navWrapper {
+        border-top: 2pt solid #00a550;
+    }
+    .navLink:hover {
+        color: #00a550;
+    }
+    .activeLink {
+        color: #00a550;
+    }
+}

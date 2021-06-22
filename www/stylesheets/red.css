@@ -1,0 +1,414 @@
+/* Scrollbar */
+::-webkit-scrollbar-thumb{
+	background-color: #dc143c; /* Change on icon hover to reflect color palate*/
+}
+/* Scrollbar END */
+
+/* Main Style - START */
+/* Menu - START */
+#toggleMenu:hover{
+    color: #dc143c;
+}
+
+#closeMenu:hover{
+    color: #dc143c;
+}
+
+.sectionMenuIcons:hover{
+    color: #dc143c;
+}
+/* Menu - END */
+
+/* Home Page - START */
+.typewrite{
+    color: #dc143c;
+    border-right: 5pt solid #dc143c;
+}
+/* Home Page - END */
+
+/* Navigation - START */
+#toggleNavBar:hover {
+    color: #dc143c;
+}
+
+.navLink::after{
+    background-color: #dc143c;
+}
+
+#hireMeNav{
+    color: #dc143c;
+    border: 2pt solid #dc143c;
+}
+
+#hireMeNav:hover{
+    background-color: #dc143c;
+}
+/* Navigation - END */
+
+/* Featured Work App - START */
+.featuredContainerApp{
+    border-left: 2pt solid #dc143c;
+    border-bottom: 2pt solid #dc143c;
+}
+
+.featuredContainerApp:nth-of-type(even) {
+    border-right: 2pt solid #dc143c;
+}
+
+#appPortfolio .phoneModel{
+    border: 2pt solid #dc143c;
+}
+
+#designPortfolio .monitorModel{
+    border: 2pt solid #dc143c;
+}
+
+.projectTitle a:hover{
+    color: #dc143c;
+}
+
+.projectLink{
+    color: #dc143c;
+}
+/* Featured Work App - END */
+
+/* Featured Work Design - START */
+.featuredContainerDesign{
+    border-left: 2pt solid #dc143c;
+    border-bottom: 2pt solid #dc143c;
+}
+
+.featuredContainerDesign:nth-of-type(even) {
+    border-right: 2pt solid #dc143c;
+}
+
+.projectTitle a:hover{
+    color: #dc143c;
+}
+
+.projectLink{
+    color: #dc143c;
+}
+
+.projectDescription a{
+    color: #dc143c;
+}
+/* Featured Work Design - END */
+
+/* Featured Work Production - START */
+.featuredContainer{
+    border-left: 2pt solid #dc143c;
+    border-bottom: 2pt solid #dc143c;
+}
+
+.featuredContainer:nth-of-type(even) {
+    border-right: 2pt solid #dc143c;
+}
+
+.projectTitle a:hover{
+    color: #dc143c;
+}
+
+.projectArtist{
+    color: #dc143c;
+}
+/* Featured Work Production - END */
+
+/* Production About me - START */
+#tabs .tablinks{
+    color: #dc143c;
+    border: 2pt solid #dc143c;
+}
+
+#tabs .tablinks:hover{
+    background-color: #dc143c;
+}
+
+#tabs .active {
+    background-color: #dc143c;
+}
+
+.tabcontent {
+    border: 2pt solid #dc143c;
+}
+
+.tabcontent a{
+    color: #dc143c;
+}
+/* Production About me - END */
+
+/* Portfolio Slide - START */
+.flickity-button {
+    background: #dc143c;
+}
+
+.flickity-button:hover {
+    background: #dc143c;
+}
+/* Portfolio Slide - END */
+
+/* Production Portfolio - START */
+#selectedWork::after{
+    background-color: #dc143c;
+}
+
+#selectedWork .portfolioSong{
+    border-bottom: 2pt solid #dc143c;
+}
+
+#togglePortfolioScale{
+    background-color: #dc143c;
+}
+
+#togglePortfolioFocus{
+    background-color: #dc143c;
+}
+
+.filterBtn {
+    color: #dc143c;
+    border: 2pt solid #dc143c;
+}
+
+.filterBtn:hover {
+    background-color: #dc143c;
+}
+
+.filterBtn.activeFilter {
+    background-color: #dc143c;
+}
+
+.filterPortfolioWork {
+    border: 1pt solid #dc143c;
+}
+
+.filterPortfolioWork:hover {
+    -webkit-box-shadow: inset 0 0 0 12vw rgba(220, 20, 60, 0.6);
+            box-shadow: inset 0 0 0 12vw rgba(220, 20, 60, 0.6);
+}
+
+.myMusicGrid:hover{
+    -webkit-box-shadow: inset 0 0 0 12vw rgba(220, 20, 60, 0.6);
+            box-shadow: inset 0 0 0 12vw rgba(220, 20, 60, 0.6);
+}
+/* Production Portfolio - END */
+
+/* Production Contact - START */
+#contactFormContact:after {
+    background-color: #dc143c;
+}
+
+.formSplit .nextFormTab, .formSplit .formResetNext{
+    color: #dc143c;
+    border: 2pt solid #dc143c;
+}
+
+.formSplit .nextFormTab:hover, .formSplit .formResetNext:hover{
+    background-color: #dc143c;
+}
+
+.formSplit .formContainBtns #formReset, .formSplit .formContainBtns #formSubmit {
+    border: 2pt solid #dc143c;
+}
+
+.formSplit .formContainBtns #formSubmit {
+    background-color: #dc143c;
+}
+
+.formSplit .formContainBtns #formReset:hover{
+    background-color: #dc143c;
+}
+
+.call2ActionContact:hover{
+    color: #dc143c;
+}
+
+.call2ActionContact > i{
+    color: #dc143c;
+}
+/* Production Contact - END */
+
+/* HireMe Form - START */
+#hireMeFormClose{
+    color: #1D1F20;
+}
+
+#formBG > h2 {
+    color: #1D1F20;
+}
+
+.formContain input{
+    border: 1pt solid #dc143c;
+}
+
+.jobType{
+    border: 1pt solid #dc143c;
+    background-image: url(../images/arrowRed.svg);
+}
+
+.formContain textarea{
+    border: 1pt solid #dc143c;
+}
+
+#formReset{
+    color: #dc143c;
+    border: 2pt solid #dc143c;
+}
+
+#formReset:hover{
+    color: #1D1F20;
+    background-color: #dc143c;
+}
+
+#formSubmit{
+    color: #1D1F20;
+    border: 2pt solid #dc143c;
+    background-color: #dc143c;
+}
+/* HireMe Form - END */
+
+/* Bottom - START */
+.call2ActionIcons:hover{
+    color: #dc143c;
+}
+
+#hireMeBottom{
+    color: #dc143c;
+    border: 2pt solid #dc143c;
+}
+
+#hireMeBottom:hover{
+    background-color: #dc143c;
+}
+/* Bottom - END */
+
+/* Footer - START */
+#back2top{
+    color: #dc143c;
+}
+/* Footer - END */
+
+/* Custom audio player - START */
+.projectPlaylist {
+    border: 2pt solid #dc143c;
+}
+
+.durationSlider::-webkit-slider-runnable-track {
+    background-color: #001831;
+}
+
+.durationSlider::-webkit-slider-thumb {
+    background-color: #dc143c;
+    -webkit-box-shadow: -100vw 0 0 100vw #dc143c;
+            box-shadow: -100vw 0 0 100vw #dc143c;
+}
+/** FF*/
+.durationSlider::-moz-range-progress {
+  background-color: #dc143c; 
+}
+.durationSlider::-moz-range-track {  
+  background-color: #001831;
+}
+/* IE*/
+.durationSlider::-ms-fill-lower {
+  background-color: #dc143c; 
+}
+.durationSlider::-ms-fill-upper {  
+  background-color: #001831;
+}
+
+.controls > *:hover{
+    color: #dc143c;
+}
+
+.volumeSlider::-webkit-slider-runnable-track {
+    color: #dc143c;
+}
+
+.volumeSlider::-webkit-slider-thumb {
+    background-color: #dc143c;
+    -webkit-box-shadow: -100pt 0 0 100pt #dc143c;
+            box-shadow: -100pt 0 0 100pt #dc143c;
+}
+/** FF*/
+.volumeSlider::-moz-range-progress {
+  background-color: #dc143c; 
+}
+/* IE*/
+.volumeSlider::-ms-fill-lower {
+  background-color: #dc143c; 
+}
+
+.playlistSongs{
+    border: 2pt solid #dc143c;
+}
+
+.song:hover{
+    color: #dc143c;
+}
+
+/*
+.activeSong{
+    color: #dc143c;
+}
+*/
+/* Custom audio player - END */
+
+/* Custom Animated Elements - START */
+.wave1 {
+    fill:#dc143c;
+}
+
+.wave2 {
+    fill:#dc143c;
+}
+
+.wave3 {
+    fill:#dc143c;
+}
+
+@-webkit-keyframes pulseTab {
+  0% {
+    background-color: rgba(220, 20, 60, 0.7);
+    border: 2pt rgba(220, 20, 60, 0.7);
+  }
+
+  50% {
+      background-color: rgba(220, 20, 60, 1);
+      border: 2pt rgba(220, 20, 60, 1);
+  }
+
+  100% {
+      background-color: rgba(220, 20, 60, 0.7);
+      border: 2pt rgba(220, 20, 60, 0.7);
+  }
+}
+
+@keyframes pulseTab {
+  0% {
+      background-color: rgba(220, 20, 60, 0.7);
+      border: 2pt rgba(220, 20, 60, 0.7);
+  }
+
+  50% {
+      background-color: rgba(220, 20, 60, 1);
+      border: 2pt rgba(220, 20, 60, 1);
+  }
+
+  100% {
+      background-color: rgba(220, 20, 60, 0.7);
+      border: 2pt rgba(220, 20, 60, 0.7);
+  }
+}
+/* Custom Animated Elements - END */
+
+@media only screen and (max-width: 1000px) {
+    #navWrapper {
+        border-top: 2pt solid #dc143c;
+    }
+    .navLink:hover {
+        color: #dc143c;
+    }
+    .activeLink {
+        color: #dc143c;
+    }
+}

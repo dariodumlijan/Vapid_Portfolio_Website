@@ -1,0 +1,24 @@
+<nav id="mainNavigation">
+    <a id="logo" href="/">
+        <img class="designLogo" src="{{designLogo label="Design Logo" type=image tag=false required=true priority=2}}" />
+        <img class="musicLogo" src="{{musicLogo label="Music Logo" type=image tag=false required=true  priority=2}}" />
+    </a>
+    
+    <div id="navWrapper">
+    {{#section navigation label="Navigation" multiple=true sortable=false priority=1}}
+        <a class="navLink {{navClass type=text label="Navigation Btn Class" placeholder="app/design/production/music" required=true priority=1}}" href="{{navLink type=text label="Navigation Btn Link" placeholder="index.html" required=true}}" value="{{navItemSort type=number label="Navigation Btn Priority" min=1 max=10 step=1 range=false required=true priority=2}}">
+            <span class="navItem">{{navItem type=text label="Navigation Btn Name" placeholder="Home" required=true priority=3}}</span>
+        </a>
+    {{/section}}
+    </div>
+    
+    <p id="hireMeNav" class="hireMe">{{hire type=text label="Hire" placeholder="Hire Me" required=false}}</p>
+    
+    <div id="navIcons">
+        <i id="toggleNavBar" class="fas fa-bars"></i>
+
+        <i id="toggleMenu" class="fas fa-ellipsis-v" onclick="showMenu();"></i>
+    </div>
+    {{> menu}}
+    
+</nav>

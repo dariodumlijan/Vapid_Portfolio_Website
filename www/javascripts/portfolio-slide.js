@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){var e=jQuery(".gallery").flickity();e.on("staticClick.flickity",function(l,t,o,r){"number"==typeof r&&e.flickity("selectCell",r)}),jQuery(".gallery-cell").on("click",function(){var e=jQuery(this).attr("value");jQuery(".selectedPortfolio").removeClass("selectedPortfolio"),jQuery("#selectedWork ."+e).addClass("selectedPortfolio")})});
