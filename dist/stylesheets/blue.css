@@ -1,0 +1,403 @@
+/* Scrollbar */
+::-webkit-scrollbar-thumb{
+	background-color: #0066cc; /* Change on icon hover to reflect color palate*/
+}
+/* Scrollbar END */
+
+/* Main Style - START */
+/* Menu - START */
+#menuIcon:hover{
+    color: #0066cc;
+}
+
+#toggleMenu:hover{
+    color: #0066cc;
+}
+
+#closeMenu:hover{
+    color: #0066cc;
+}
+
+.sectionMenuIcons:hover{
+    color: #0066cc;
+}
+/* Menu - END */
+
+/* Home Page - START */
+.typewrite{
+    color: #0066cc;
+    border-right: 5pt solid #0066cc;
+}
+/* Home Page - END */
+
+/* Navigation - START */
+#toggleNavBar:hover {
+    color: #0066cc;
+}
+
+.navLink::after{
+    background-color: #0066cc;
+}
+
+#hireMeNav{
+    color: #0066cc;
+    border: 2pt solid #0066cc;
+}
+
+#hireMeNav:hover{
+    background-color: #0066cc;
+}
+/* Navigation - END */
+
+/* Featured Work App - START */
+.featuredContainerApp{
+    border-left: 2pt solid #0066cc;
+    border-bottom: 2pt solid #0066cc;
+}
+
+.featuredContainerApp:nth-of-type(even) {
+    border-right: 2pt solid #0066cc;
+}
+
+.phoneModel{
+    border: 1pt solid #0066cc;
+}
+
+.projectTitle a:hover{
+    color: #0066cc;
+}
+
+.projectLink{
+    color: #0066cc;
+}
+
+.projectDescription a{
+    color: #0066cc;
+}
+/* Featured Work App - END */
+
+/* Featured Work Design - START */
+.featuredContainerDesign{
+    border-left: 2pt solid #0066cc;
+    border-bottom: 2pt solid #0066cc;
+}
+
+.featuredContainerDesign:nth-of-type(even) {
+    border-right: 2pt solid #0066cc;
+}
+
+.projectTitle a:hover{
+    color: #0066cc;
+}
+
+.projectLink{
+    color: #0066cc;
+}
+/* Featured Work Design - END */
+
+/* Featured Work Production - START */
+.featuredContainer{
+    border-left: 2pt solid #0066cc;
+    border-bottom: 2pt solid #0066cc;
+}
+
+.featuredContainer:nth-of-type(even) {
+    border-right: 2pt solid #0066cc;
+}
+
+.projectTitle a:hover{
+    color: #0066cc;
+}
+
+.projectArtist{
+    color: #0066cc;
+}
+/* Featured Work Production - END */
+
+/* Production About me - START */
+#tabs .tablinks{
+    color: #0066cc;
+    border: 2pt solid #0066cc;
+}
+
+#tabs .tablinks:hover{
+    background-color: #0066cc;
+}
+
+#tabs .active {
+    background-color: #0066cc;
+}
+
+.tabcontent {
+    border: 2pt solid #0066cc;
+}
+
+.tabcontent a{
+    color: #0066cc;
+}
+/* Production About me - END */
+
+/* Production Portfolio - START */
+#selectedWork::after{
+    background-color: #0066cc;
+}
+
+#togglePortfolioScale{
+    background-color: #0066cc;
+}
+
+#togglePortfolioFocus{
+    background-color: #0066cc;
+}
+
+.filterBtn {
+    color: #0066cc;
+    border: 2pt solid #0066cc;
+}
+
+.filterBtn:hover {
+    background-color: #0066cc;
+}
+
+.filterBtn.activeFilter {
+    background-color: #0066cc;
+}
+
+.filterPortfolioWork {
+    border: 1pt solid #0066cc;
+}
+
+.filterPortfolioWork:hover {
+    -webkit-box-shadow: inset 0 0 0 40vw rgba(0, 102, 204, 0.6);
+            box-shadow: inset 0 0 0 40vw rgba(0, 102, 204, 0.6);
+}
+
+.myMusicGrid:hover{
+    -webkit-box-shadow: inset 0 0 0 40vw rgba(0, 102, 204, 0.6);
+            box-shadow: inset 0 0 0 40vw rgba(0, 102, 204, 0.6);
+}
+/* Production Portfolio - END */
+
+/* Production Contact - START */
+#contactFormContact:after {
+    background-color: #0066cc;
+}
+
+.formSplit .nextFormTab, .formSplit .formResetNext{
+    color: #0066cc;
+    border: 2pt solid #0066cc;
+}
+
+.formSplit .nextFormTab:hover, .formSplit .formResetNext:hover{
+    background-color: #0066cc;
+}
+
+.formSplit .formContainBtns #formReset, .formSplit .formContainBtns #formSubmit {
+    border: 2pt solid #0066cc;
+}
+
+.formSplit .formContainBtns #formSubmit {
+    background-color: #0066cc;
+}
+
+.formSplit .formContainBtns #formReset:hover{
+    background-color: #0066cc;
+}
+
+.call2ActionContact:hover{
+    color: #0066cc;
+}
+
+.call2ActionContact > i{
+    color: #0066cc;
+}
+/* Production Contact - END */
+
+/* HireMe Form - START */
+#hireMeFormClose{
+    color: #ccc;
+}
+
+#formBG > h2 {
+    color: #ccc;
+}
+
+.formContain input{
+    border: 1pt solid #0066cc;
+}
+
+.jobType{
+    border: 1pt solid #0066cc;
+    background-image: url(../images/arrowBlue.svg);
+}
+
+.formContain textarea{
+    border: 1pt solid #0066cc;
+}
+
+#formReset{
+    color: #0066cc;
+    border: 2pt solid #0066cc;
+}
+
+#formReset:hover{
+    color: #ccc;
+    background-color: #0066cc;
+}
+
+#formSubmit{
+    color: #ccc;
+    border: 2pt solid #0066cc;
+    background-color: #0066cc;
+}
+/* HireMe Form - END */
+
+/* Bottom - START */
+.call2ActionIcons:hover{
+    color: #0066cc;
+}
+
+#hireMeBottom{
+    color: #0066cc;
+    border: 2pt solid #0066cc;
+}
+
+#hireMeBottom:hover{
+    background-color: #0066cc;
+}
+/* Bottom - END */
+
+/* Footer - START */
+#back2top{
+    color: #0066cc;
+}
+/* Footer - END */
+
+/* Custom audio player - START */
+.projectPlaylist {
+    border: 2pt solid #0066cc;
+}
+
+.durationSlider{
+    background-color: #001831;
+}
+
+.durationSlider::-webkit-slider-runnable-track {
+    background-color: #001831;
+}
+
+.durationSlider::-webkit-slider-thumb {
+    background-color: #0066cc;
+    -webkit-box-shadow: -100vw 0 0 100vw #0066cc;
+            box-shadow: -100vw 0 0 100vw #0066cc;
+}
+
+/** FF*/
+.durationSlider::-moz-range-progress {
+  background-color: #0066cc; 
+}
+.durationSlider::-moz-range-track {  
+  background-color: #001831;
+}
+/* IE*/
+.durationSlider::-ms-fill-lower {
+  background-color: #0066cc; 
+}
+.durationSlider::-ms-fill-upper {  
+  background-color: #001831;
+}
+
+.controls > *:hover{
+    color: #0066cc;
+}
+
+.volumeSlider::-webkit-slider-runnable-track {
+    color: #0066cc;
+}
+
+.volumeSlider::-webkit-slider-thumb {
+    background-color: #0066cc;
+    -webkit-box-shadow: -100pt 0 0 100pt #0066cc;
+            box-shadow: -100pt 0 0 100pt #0066cc;
+}
+/** FF*/
+.volumeSlider::-moz-range-progress {
+  background-color: #0066cc; 
+}
+/* IE*/
+.volumeSlider::-ms-fill-lower {
+  background-color: #0066cc; 
+}
+
+.playlistSongs{
+    border: 2pt solid #0066cc;
+}
+
+.song:hover{
+    color: #0066cc;
+}
+
+.activeSong{
+    color: #0066cc;
+}
+/* Custom audio player - END */
+
+/* Custom Animated Elements - START */
+.wave1 {
+    fill:#0066cc;
+}
+
+.wave2 {
+    fill:#0066cc;
+}
+
+.wave3 {
+    fill:#0066cc;
+}
+
+@-webkit-keyframes pulseTab {
+  0% {
+    background-color: rgba(0, 102, 204, 0.7);
+    border: 2pt rgba(0, 102, 204, 0.7);
+  }
+
+  50% {
+      background-color: rgba(0, 102, 204, 1);
+      border: 2pt rgba(0, 102, 204, 1);
+  }
+
+  100% {
+      background-color: rgba(0, 102, 204, 0.7);
+      border: 2pt rgba(0, 102, 204, 0.7);
+  }
+}
+
+@keyframes pulseTab {
+  0% {
+      background-color: rgba(0, 102, 204, 0.7);
+      border: 2pt rgba(0, 102, 204, 0.7);
+  }
+
+  50% {
+      background-color: rgba(0, 102, 204, 1);
+      border: 2pt rgba(0, 102, 204, 1);
+  }
+
+  100% {
+      background-color: rgba(0, 102, 204, 0.7);
+      border: 2pt rgba(0, 102, 204, 0.7);
+  }
+}
+/* Custom Animated Elements - END */
+
+@media only screen and (max-width: 1000px) {
+    #navWrapper {
+        border-top: 2pt solid #0066cc;
+    }
+    .navLink:hover {
+        color: #0066cc;
+    }
+    .activeLink {
+        color: #0066cc;
+    }
+}
